@@ -21,7 +21,6 @@ def quiz():
         q13 = ('What queen was the last ruler of Hawaii before the U.S. annexation?')
         q14 = ('What is the meaning of life?')
         q15 = ('What is the average mass of a pulsar?')
-        print len(qlist)
         question = random.choice(qlist)
         if question == 1:
             qlist.remove(1)
@@ -236,7 +235,7 @@ def quiz():
     if choice == 'easy' or choice == 'Easy':
         quizeasy()          
 def quizeasy():
-    print ('welcome to the five question easy quiz challenge!! You will start with all the money you earned but if you fail you loose it all!!!!!!')
+    print ('welcome to the five question easy quiz challenge!! You will start with all the money you earned but if you fail you lose it all!!!!!!')
     money = 7500
     qlist = [1,2,3,4,5]
     wrong = False
@@ -308,10 +307,10 @@ def quizeasy():
             else:
                 wrong = True
     if wrong == True:
-        print ('You loose all your money!!!!!!')
+        print ('You lose all your money!!!!!!')
         return 0
     else:
-        print ('You Win!!!')
+        print ('You double your money!!!')
     return money*2
 def quizhard():
     print ('welcome to the five question hard quiz challenge!! You will start with all the money you earned but if you fail you loose it all!!!!!!')
@@ -386,11 +385,11 @@ def quizhard():
             else:
                 wrong = True
     if wrong == True:
-        print ('You loose all your money!!!!!!')
+        print ('You lose all your money!!!!!!')
         return 0
-    else:
-        print ('You Win!!!')
-    return money*3 
+    if wrong == False:
+        print ('You Double your money!!!')
+        return money * 2 
         
     
         
